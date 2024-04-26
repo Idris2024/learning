@@ -94,3 +94,42 @@ function square(x) {
 }
 const results = square(4);
 console.log(results);  // Output: 16
+function exampleScope() {
+  let localVar = "I am local to this function";
+  console.log(localVar);
+}
+exampleScope();      // Output: I am local to this function
+
+function outerFunction() {
+  let outerVar = "I am outer";
+
+  function innerFunction() {
+    console.log(outerVar);
+  }
+
+  return innerFunction;
+}
+const closureFunction = outerFunction();
+closureFunction();   // Output: I am outer
+// Factorial calculation using recursion
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n-1)
+  }
+}
+console.log(factorial(5));  // Output: 120
+
+function fibonacci(n) {
+ if (n <= 1) {
+  return n; } else {
+return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+ console.log(fibonacci(6));  // Output: 8 (0, 1, 1, 2, 3, 5, 8)
+
+
+
+
+
