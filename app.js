@@ -184,5 +184,14 @@ console.log(values); // Output: ['Honda', 'Accord', 2020]
 const entries = Object.entries(car);
 console.log(entries); // Output: [['make', 'Honda'], ['model', 'Accord'], ['year', 2020]]
 
+let array =[];
+for (let j = 1; j <= 6; j++) {
+  array.push(j);
+}
+array.reverse();
+console.log(array);
 
-
+let set = [1,1,2,2,3,3,4,4,5,5,6,6];
+let uniqueNumbers = [...new
+  Set(set)];
+console.log(uniqueNumbers);
