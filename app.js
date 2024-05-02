@@ -128,8 +128,61 @@ return fibonacci(n - 1) + fibonacci(n - 2);
   }
 }
  console.log(fibonacci(6));  // Output: 8 (0, 1, 1, 2, 3, 5, 8)
+ const fruits = ['apple', 'banana', 'orange'];
 
+console.log(fruits[0]);  // Output: 'apple'
 
+fruits[1] = 'grape';
+console.log(fruits);  // Output: ['apple', 'grape', 'orange']
+const numberss = [1, 2, 3, 4, 5];
+
+// Using forEach
+numbers.forEach((num) => {
+  console.log(num);  // Output: 1, 2, 3, 4, 5
+});
+const persons = {
+  name: 'John',
+  age: 30,
+  city: 'New York'
+};
+
+console.log(persons.name);  // Output: 'John'
+
+const propertyName = 'age';
+console.log(persons[propertyName]);  // Output: 30
+const student = {
+  name: 'Islamiyah',
+  age: 25,
+  grades: [90, 85, 95],
+
+  // Method to calculate average grade
+  calculateAverage: function () {
+    const sum = this.grades.reduce((acc, grade) => acc + grade, 0);
+    return sum / this.grades.length;
+  }
+};
+
+console.log(student.name);               // Output: 'Alice'
+console.log(student.calculateAverage());  // Output: Average grade
+
+const car = {
+make: 'Honda',
+model: 'Accord',
+year: 2020
+};
+// Using for...in loop
+for (const key in car) {
+console.log(`${key}: ${car[key]}`);
+}
+// Using Object.keys
+const keys = Object.keys(car);
+console.log(keys); // Output: ['make', 'model', 'year']
+// Using Object.values
+const values = Object.values(car);
+console.log(values); // Output: ['Honda', 'Accord', 2020]
+// Using Object.entries
+const entries = Object.entries(car);
+console.log(entries); // Output: [['make', 'Honda'], ['model', 'Accord'], ['year', 2020]]
 
 
 
