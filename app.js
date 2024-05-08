@@ -195,3 +195,52 @@ let set = [1,1,2,2,3,3,4,4,5,5,6,6];
 let uniqueNumbers = [...new
   Set(set)];
 console.log(uniqueNumbers);
+//    typeof("name");
+const alHikmahSchool = {
+  schoolName: 'Al-Hikmah',
+  location: 'Ilorin, Kwara State',
+  courses: ['Information Systems', 'Software Development']
+};
+// console.log('typeof --> ', typeof alHikmahSchool);
+// console.log(Object.keys(alHikmahSchool));
+// console.log(Object.values(alHikmahSchool));
+// console.log(Object.entries(alHikmahSchool));
+console.log('=================================')
+for (const item of Object.entries(alHikmahSchool)) {
+  console.log(Array.isArray(item));
+  console.log(item);
+  const [a, b] = item;
+  console.log('this is a key: %s and this is a value %s', a, b);
+}
+const { location} = alHikmahSchool;
+console.log(location);
+console.log('=============================')
+// Asynchronous Example :
+const myPromise = new Promise((resolve, reject) => {
+  // Asynchronous operation, e.g., fetching data
+  const success = true;
+  if (success) {
+    resolve("Operation successful");
+  } else {
+    reject("Operation failed");
+  }
+});
+myPromise
+  .then((result) => {
+    console.log(result); // Output: Operation successful
+  })
+  .catch((error) => {
+    console.error(error); // Output: Operation failed
+  });
+ // Async/Await :
+ async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+fetchData();
