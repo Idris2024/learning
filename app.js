@@ -244,3 +244,29 @@ myPromise
 }
 
 fetchData();
+console.log('Start');
+
+setTimeout(() => {
+  console.log('Timeout callback');
+}, 2000);
+
+console.log('End');
+
+/*Accessing DOM Elements:
+JavaScript provides several methods for accessing DOM elements:
+
+- getElementById: Retrieves an element by its unique ID attribute.
+- getElementsByClassName: Retrieves elements by their class name.
+- getElementsByTagName: Retrieves elements by their tag name.
+- querySelector: Retrieves the first element that matches a CSS selector.
+- querySelectorAll: Retrieves all elements that match a CSS selector.
+Accessing DOM elements
+const elementById = document.getElementById('myElement');
+const elementsByClass = document.getElementsByClassName('myClass');
+const elementsByTag = document.getElementsByTagName('div');
+const elementByQuery = document.querySelector('.myClass');
+const elementsByQueryAll = document.querySelectorAll('.myClass');
+*/
+
+
+
